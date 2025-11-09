@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Courses</title>
+    <link rel="icon" type="image/png" href="{% static 'myapp/images/bookfavicon.png' %}">
+<style>
+h1 {
+    text-align: center;
+}
+</style>
+</head>
+<body>
+<h1>Courses Page</h1>
+<p style="text-align: center;">
+<a href="{% url 'home' %}">Home</a> &nbsp; | &nbsp;
+<a href="{% url 'courses' %}">Courses</a> &nbsp; | &nbsp;
+<a href="{% url 'lesson' %}">Lesson</a> &nbsp; | &nbsp;
+<a href="{% url 'about' %}">About</a>
+</p>
+<hr>
+<div>
+    <h2>Available Courses</h2>
+    <ul>
+        {% for course in courses %}
+            <li><strong>{{ course.title }}</strong>: {{ course.description }} <br>
+            Skill Rating: {{ course.skill_rating }}/5 | Category: {{ course.category }}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+</body>
+</html>

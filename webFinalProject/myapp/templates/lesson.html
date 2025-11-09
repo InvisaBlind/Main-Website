@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson</title>
+    <link rel="icon" type="image/png" href="{% static 'myapp/images/bookfavicon.png' %}">
+<style>
+h1 {
+    text-align: center;
+}
+</style>
+</head>
+<body>
+<h1>Lesson Page</h1>
+<p style="text-align: center;">
+<a href="{% url 'home' %}">Home</a> &nbsp; | &nbsp;
+<a href="{% url 'courses' %}">Courses</a> &nbsp; | &nbsp;
+<a href="{% url 'lesson' %}">Lesson</a> &nbsp; | &nbsp;
+<a href="{% url 'about' %}">About</a>
+</p>
+<hr>
+<p>This is the lesson page.</p>
+</body>
+</html>
