@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Home Page</title>
+<title>Projects</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
 <style>
     body {
-            /* font-family: 'Times New Roman', Times, serif; */
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0 20px;
@@ -59,6 +61,176 @@
         section {
             color: white
         }
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 48px;
+        }
+
+
+.projects-section {
+    max-width: 1000px;
+    margin: 40px auto 60px;
+    color: white;
+}
+
+/* Optional section heading + blurb */
+.projects-header {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.projects-header h2 {
+    margin: 0 0 8px;
+    font-size: 26px;
+}
+
+.projects-header p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Featured project at the top (bigger card) */
+.featured-project {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: left;
+}
+
+.featured-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    opacity: 0.7;
+    margin-bottom: 6px;
+}
+
+.featured-title {
+    font-size: 22px;
+    margin: 0 0 8px;
+    font-weight: 600;
+}
+
+.featured-meta {
+    font-size: 13px;
+    opacity: 0.85;
+    margin-bottom: 10px;
+}
+
+.featured-description {
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.9;
+    margin-bottom: 12px;
+}
+
+.featured-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.tag-pill {
+    font-size: 11px;
+    padding: 4px 8px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.15);
+    opacity: 0.9;
+}
+
+.featured-links {
+    display: flex;
+    gap: 10px;
+}
+
+.featured-links a {
+    font-size: 12px;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 999px;
+    border: 1px solid #38bdf8;
+    color: #38bdf8;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.featured-links a:hover {
+    background: #38bdf8;
+    color: #020617;
+}
+
+/* Grid of smaller project cards */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+}
+
+.project-card {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 14px 16px;
+    text-align: left;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    display: flex;
+    flex-direction: column;
+}
+
+.project-title {
+    font-size: 18px;
+    margin: 0 0 6px;
+    font-weight: 600;
+}
+
+.project-meta {
+    font-size: 12px;
+    opacity: 0.8;
+    margin-bottom: 8px;
+}
+
+.project-description {
+    font-size: 13px;
+    line-height: 1.5;
+    opacity: 0.9;
+    margin-bottom: 10px;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.project-links {
+    display: flex;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.project-links a {
+    font-size: 11px;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 999px;
+    border: 1px solid #4b5563;
+    color: #e5e7eb;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.project-links a:hover {
+    background: #4b5563;
+}
+
+
+
+
 </style>
 </head>
 <body> 
@@ -72,9 +244,110 @@
         <a href="/contact/">Contact</a>
         <a href="/about/">About</a>
     </nav>
-<h1>Project Page</h1>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="projects-section">
+    <div class="projects-header">
+        <h1 class="bangers-regular">Projects</h1>
+        <p>
+        </p>
+    </div>
+
+    <!-- Featured project (optional – good for your main project) -->
+    <section class="featured-project">
+        <div class="featured-label">Featured</div>
+        <h3 class="featured-title">This Website</h3>
+        <div class="featured-meta">
+            I will be using this website for various coding experiments, projects, and hosting.
+        </div>
+        <p class="featured-description">
+            I have learned deep knowledge of HTML, CSS, and Django to build this
+             website from scratch. Everything you see here is built and designed
+              by me.
+        </p>
+
+        <div class="featured-tags">
+            <span class="tag-pill">HTML</span>
+            <span class="tag-pill">CSS</span>
+            <span class="tag-pill">JavaScript</span>
+            <span class="tag-pill">Django</span>
+        </div>
+
+        <div class="featured-links">
+            <a href="/" target="_blank">Link</a>
+            <a href="/comingsoon" target="_blank">Code</a>
+        </div>
+    </section>
+
+    <!-- Other projects in a grid -->
+    <section class="projects-grid">
+        <article class="project-card">
+            <h3 class="project-title">Outfit Selector</h3>
+            <div class="project-meta">Video Game</div>
+            <p class="project-description">
+                This is an outfit randomizer game where players can get a randomized
+                 outfit to help decide what to wear.
+            </p>
+
+            <div class="project-tags">
+                <span class="tag-pill">GDScript</span>
+                <span class="tag-pill">Godot Engine</span>
+            </div>
+
+            <div class="project-links">
+                <a href="https://invisablind.itch.io/outfit-selector" target="_blank">Link</a>
+                <a href="/comingsoon" target="_blank">Code</a>
+            </div>
+        </article>
+
+        <article class="project-card">
+            <h3 class="project-title">Dice Game</h3>
+            <div class="project-meta">Video Game</div>
+            <p class="project-description">
+                This is a simple dice game where players can roll dice and try to
+                 get the highest score possible.
+            </p>
+
+            <div class="project-tags">
+                <span class="tag-pill">GDScript</span>
+                <span class="tag-pill">Godot Engine</span>
+            </div>
+
+            <div class="project-links">
+                <a href="https://invisablind.itch.io/dice-roulette" 
+                target="_blank">Link</a>
+                <a href="/comingsoon" target="_blank">Code</a>
+            </div>
+        </article>
+
+        <!-- Duplicate <article class="project-card"> for more projects -->
+        <article class="project-card">
+            <h3 class="project-title">Online Learning Platform</h3>
+            <div class="project-meta">Website</div>
+            <p class="project-description">
+                School project for an online learning platform that allows
+                 students to access course materials to learn.
+            </p>
+
+            <div class="project-tags">
+                <span class="tag-pill">HTML</span>
+                <span class="tag-pill">CSS</span>
+                <span class="tag-pill">JavaScript</span>
+                <span class="tag-pill">Django</span>
+            </div>
+
+            <div class="project-links">
+                <a href="/onlineLearningPlatform" target="_blank">Link</a>
+                <a href="/comingsoon" target="_blank">Code</a>
+            </div>
+    </section>
+</div>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+<footer>
+    &copy; 2025 Henry Fitzgerald. All rights reserved.
+</footer>
 </body>
 </html>

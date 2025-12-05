@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Base</title>
+<title>Online Learning Platform</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -68,6 +69,34 @@
             color: white;
             text-align: center;
         }
+
+.project-images-section {
+    width: 100%;
+    max-width: none;
+    margin: 30px auto 60px;
+    color: white;
+    text-align: center;
+}
+
+.project-image-card {
+    background: #111111;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    width: max-content;
+    display: inline-block;
+    margin: 0 auto 25px;
+}
+
+.project-image-card img {
+    width: 1279px;   
+    height: 719px;          /*Default for these images is 1919x1079 */
+    object-fit: contain;      /*half is 959.5x539.5 */
+    border-radius: 10px;       /* 1.5 is 1279.3x719.3*/
+    display: block;
+}
+
 </style>
 </head>
 <body> 
@@ -82,11 +111,40 @@
         <a href="/about/">About</a>
     </nav>
     <div class="container">
-        <h1 class="bangers-regular" style="font-size: 48px;">Welcome!</h1>
+        <h1 class="bangers-regular" style="font-size: 48px;">Online Learning Platform Images</h1>
     </div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br>
+
+<section class="project-images-section">
+    <div class="project-images-grid">
+
+        <!-- Screenshot 1 -->
+        <div class="project-image-card">
+            <img src="{% static 'webfinalprojectHomePageOutput.png' %}" alt="Screenshot here">
+        </div>
+
+        <!-- Screenshot 2 -->
+        <div class="project-image-card">
+            <img src="{% static 'webfinalprojectCoursePageOutput.png' %}" alt="Screenshot here">
+        </div>
+
+        <!-- Screenshot 3 -->
+        <div class="project-image-card">
+            <img src="{% static 'webfinalprojectLessonPageOutput1.png' %}" alt="Screenshot here">
+        </div>
+
+        <!-- Screenshot 4 -->
+        <div class="project-image-card">
+            <img src="{% static 'webfinalprojectLessonPageOutput2.png' %}" alt="Screenshot here">
+        </div>
+
+        <!-- Screenshot 4 -->
+        <div class="project-image-card">
+            <img src="{% static 'webfinalprojectUnavailableOutput.png' %}" alt="Screenshot here">
+        </div>
+    </div>
+</section>
+
+<br><br>
 
 <footer>
     &copy; 2025 Henry Fitzgerald. All rights reserved.

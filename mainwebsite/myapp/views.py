@@ -9,3 +9,7 @@ def contact(request):
     return render(request, "contact.html")
 def project(request):
     return render(request, "project.html")
+def comingsoon(request):
+    return render(request, "comingsoon.html")
+def onlineLearningPlatform(request):
+    return render(request, "onlineLearningPlatform.html")
